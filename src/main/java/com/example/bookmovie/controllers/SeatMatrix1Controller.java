@@ -8,6 +8,8 @@ import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -35,9 +37,27 @@ public class SeatMatrix1Controller {
         this.seatMatrix1Repository = seatMatrix1Repository;
     }
 
+
     @GetMapping("/seatMatrix1s")
     public List<SeatMatrix1> getAll(){
         return seatMatrix1Service.getSeatMatrix1s();
+    }
+
+    @PostMapping(value="/selectSeat")
+    public String makeSeatReserved(@RequestParam Integer colName, Integer showId){
+        if(showId==1){
+            seatMatrix1Service.selectSeat(colName);
+            return "Selected seatMatrix1";
+        }
+        else if(showId==2){
+            seatMatrix2Service.selectSeat(colName);
+            return "Selected seatMatrix2";
+        }
+        else if(showId==3){
+            seatMatrix3Service.selectSeat(colName);
+            return "Selected seatMatrix3";
+        }
+        return "Invalid show id";
     }
 
 

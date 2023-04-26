@@ -169,22 +169,22 @@ public class MainController {
         return "redirect:/";
     }
 
-    @RequestMapping(value="/selectSeat", method = RequestMethod.POST)
-    public String makeSeatReserved(@RequestParam Integer colName, Integer showId){
-        if(showId==1){
-            seatMatrix1Service.selectSeat(colName);
-            return "Selected seatMatrix1";
-        }
-        else if(showId==2){
-            seatMatrix2Service.selectSeat(colName);
-            return "Selected seatMatrix2";
-        }
-        else if(showId==3){
-            seatMatrix3Service.selectSeat(colName);
-            return "Selected seatMatrix3";
-        }
-        return "Invalid show id";
-    }
+    // @RequestMapping(value="/selectSeat", method = RequestMethod.POST)
+    // public String makeSeatReserved(@RequestParam Integer colName, Integer showId){
+    //     if(showId==1){
+    //         seatMatrix1Service.selectSeat(colName);
+    //         return "Selected seatMatrix1";
+    //     }
+    //     else if(showId==2){
+    //         seatMatrix2Service.selectSeat(colName);
+    //         return "Selected seatMatrix2";
+    //     }
+    //     else if(showId==3){
+    //         seatMatrix3Service.selectSeat(colName);
+    //         return "Selected seatMatrix3";
+    //     }
+    //     return "Invalid show id";
+    // }
 
     @PostMapping("/deselectSeat")
     public String makeSeatUnreserved(@RequestParam Integer colName, Integer showId){
