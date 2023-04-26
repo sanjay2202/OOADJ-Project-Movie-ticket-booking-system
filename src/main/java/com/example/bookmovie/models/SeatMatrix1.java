@@ -9,83 +9,40 @@ import javax.persistence.Lob;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="SeatMatrix1")
+@Table(name = "SeatMatrix1")
 public class SeatMatrix1 {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer S_No;
-    @Column(name="A")
-    private Integer A;
-    @Column(name="B")
-    private Integer B;
-    @Column(name="C")
-    private Integer C;
-    @Column(name="D")
-    private Integer D;
-    @Column(name="E")
-    private Integer E;
+    @Column(name="colName")
+    private Integer colName;
+    @Column(name="value")
+    private Integer value;
     
     public SeatMatrix1() {
     }
 
-    public SeatMatrix1(Integer s_No, Integer a, Integer b, Integer c, Integer d, Integer e) {
-        S_No = s_No;
-        A = a;
-        B = b;
-        C = c;
-        D = d;
-        E = e;
+    @Override
+    public String toString() {
+        return "SeatMatrix1 [colName=" + colName + ", value=" + value + "]";
     }
 
-    public Integer getS_No() {
-        return S_No;
+    public SeatMatrix1(Integer colName, Integer value) {
+        this.colName = colName;
+        this.value = value;
     }
 
-    public Integer getA() {
-        return A;
+    public Integer getColName() {
+        return colName;
     }
 
-    public Integer getB() {
-        return B;
+    public void setColName(Integer colName) {
+        this.colName = colName;
     }
 
-    public Integer getC() {
-        return C;
+    public Integer getValue() {
+        return value;
     }
 
-    public Integer getD() {
-        return D;
+    public void setValue(Integer value) {
+        this.value = value;
     }
-
-    public Integer getE() {
-        return E;
-    }
-
-    public void setS_No(Integer s_No) {
-        S_No = s_No;
-    }
-
-    public void setA(Integer a) {
-        A = a;
-    }
-
-    public void setB(Integer b) {
-        B = b;
-    }
-
-    public void setC(Integer c) {
-        C = c;
-    }
-
-    public void setD(Integer d) {
-        D = d;
-    }
-
-    public void setE(Integer e) {
-        E = e;
-    }
-
-    
-    
 }
-

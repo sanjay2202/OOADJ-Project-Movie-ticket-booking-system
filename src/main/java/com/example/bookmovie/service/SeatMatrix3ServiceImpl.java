@@ -2,6 +2,8 @@ package com.example.bookmovie.service;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.stereotype.Service;
 
 import com.example.bookmovie.models.SeatMatrix3;
@@ -21,4 +23,15 @@ public class SeatMatrix3ServiceImpl implements SeatMatrix3Service{
         return seatMatrix3Repository.findAll();
     }
     
+    @Override
+    @Transactional
+    public Object selectSeat(Integer colName) {
+        return seatMatrix3Repository.resetColumnToOne(colName);
+    }
+
+    @Override
+    @Transactional
+    public Object deselectSeat(Integer colName) {
+        return seatMatrix3Repository.resetColumnToZero(colName);
+    }
 }

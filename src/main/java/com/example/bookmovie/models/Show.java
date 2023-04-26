@@ -12,12 +12,11 @@ import javax.persistence.Table;
 public class Show {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    // @Column(name = "showId")
     Integer showId;
     @Column(name = "theatreId")
     Integer theatreId;
-    @Column(name = "id")
-    Integer id;
+    @Column(name = "movieId")
+    Integer movieId;
     @Column(name = "date")
     String date;
     @Column(name = "startTime")
@@ -32,19 +31,16 @@ public class Show {
     public Show() {
     }
 
-    
-
-    public Show(Integer showId, Integer theatreId, Integer id, String date, String startTime, String endTime,
+    public Show(Integer showId, Integer theatreId, Integer movieId, String date, String startTime, String endTime,
             Integer seatMatrixID) {
         this.showId = showId;
         this.theatreId = theatreId;
-        this.id = id;
+        this.movieId = movieId;
         this.date = date;
         this.startTime = startTime;
         this.endTime = endTime;
         this.seatMatrixID = seatMatrixID;
     }
-
 
     public Integer getShowId() {
         return showId;
@@ -55,7 +51,7 @@ public class Show {
     }
 
     public Integer getMovieId() {
-        return id;
+        return movieId;
     }
 
     public String getDate() {
@@ -78,8 +74,8 @@ public class Show {
         this.theatreId = theatreId;
     }
 
-    public void setMovieId(Integer id) {
-        this.id = id;
+    public void setMovieId(Integer movieId) {
+        this.movieId = movieId;
     }
 
     public void setDate(String date) {
@@ -100,6 +96,13 @@ public class Show {
 
     public void setSeatMatrixID(Integer seatMatrixID) {
         this.seatMatrixID = seatMatrixID;
+    }
+
+    @Override
+    public String toString() {
+        return "Show [showId=" + showId + ", theatreId=" + theatreId + ", movieId=" + movieId + ", date=" + date
+                + ", startTime="
+                + startTime + ", endTime=" + endTime + ", seatMatrixID=" + seatMatrixID + "]";
     }
 
 }

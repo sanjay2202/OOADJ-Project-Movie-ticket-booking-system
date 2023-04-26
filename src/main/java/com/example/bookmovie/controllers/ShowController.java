@@ -17,32 +17,32 @@ import com.example.bookmovie.service.ShowService;
 public class ShowController {
     private ShowService showService;
 
-    public ShowController(ShowService showService){
+    public ShowController(ShowService showService) {
         this.showService = showService;
     }
 
     @GetMapping("/shows")
-    public List<Show> getAll(){
+    public List<Show> getAll() {
         return showService.getShows();
     }
 
-    @PostMapping("/shows")
-    public Show addShow(@RequestBody Show show){
-        return showService.addShow(show);
-    }
+    // @PostMapping("/shows")
+    // public Show addShow(@RequestBody Show show) {
+    //     return showService.addShow(show);
+    // }
 
     @GetMapping("/shows/{showId}")
-    public Show getById(@PathVariable Integer showId){
+    public Show getById(@PathVariable Integer showId) {
         return showService.getShowById(showId);
     }
 
-    @GetMapping("/shows/movie/{id}")
-    public List<Show> getByMovieId(@PathVariable Integer movieId){
+    @GetMapping("/shows/movie/{movieId}")
+    public List<Show> getByMovieId(@PathVariable Integer movieId) {
         return showService.getShowByMovieId(movieId);
     }
 
     @GetMapping("/shows/theatre/{theatreId}")
-    public List<Show> getByTheatreId(@PathVariable Integer theatreId){
+    public List<Show> getByTheatreId(@PathVariable Integer theatreId) {
         return showService.getShowByTheatreId(theatreId);
     }
 

@@ -13,10 +13,11 @@ public interface UserService {
 
     public LoginMessage loginUser(Login login);
 
-    public void logoutUser(User user);
+    public void logoutUser();
 
     public User getUserById(Integer userId);
+
     public boolean deleteUser(Integer userId);
+
     public User getUserByEmailId(String email);
 }
-

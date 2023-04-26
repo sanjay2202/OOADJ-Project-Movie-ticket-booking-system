@@ -39,19 +39,20 @@ public class UserController {
     @PostMapping("/login")
     public String loginUser(@RequestBody Login login) {
         LoginMessage loginMessage = userService.loginUser(login);
-        if (loginMessage.getStatus())
-            return "redirect:/Home";
-        else
+        if (loginMessage.getStatus()) {
+            System.out.println(loginMessage.getEmail());
+            return "redirect:/";
+        } else
             return "User Not Found";
     }
 
     @GetMapping("/users/{userId}")
-    public User getById(@PathVariable Integer userId){
+    public User getById(@PathVariable Integer userId) {
         return userService.getUserById(userId);
     }
 
     @GetMapping("/users/email/{email}")
-    public User getByEmailId(@PathVariable String email){
+    public User getByEmailId(@PathVariable String email) {
         return userService.getUserByEmailId(email);
     }
 
@@ -66,4 +67,5 @@ public class UserController {
         return "redirect:/users";
     }
 
+    
 }

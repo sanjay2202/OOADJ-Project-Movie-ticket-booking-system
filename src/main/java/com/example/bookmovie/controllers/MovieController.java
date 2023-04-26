@@ -32,19 +32,20 @@ public class MovieController {
 
     // @PostMapping("/movies")
     // public String addMovie(@RequestParam("file") MultipartFile file,
-    //         @RequestParam("name") String name,
-    //         @RequestParam("genre") String genre,
-    //         @RequestParam("durationMins") Integer durationMins,
-    //         @RequestParam("releaseDate") String releaseDate,
-    //         @RequestParam("description") String description) {
-    //     System.out.println("/movies route");
-    //     System.out.println(file);
-    //     movieService.addMovie(name, genre, durationMins, releaseDate, description, file);
-    //     return "redirect:/Home";
+    // @RequestParam("name") String name,
+    // @RequestParam("genre") String genre,
+    // @RequestParam("durationMins") Integer durationMins,
+    // @RequestParam("releaseDate") String releaseDate,
+    // @RequestParam("description") String description) {
+    // System.out.println("/movies route");
+    // System.out.println(file);
+    // movieService.addMovie(name, genre, durationMins, releaseDate, description,
+    // file);
+    // return "redirect:/Home";
     // }
 
     @PostMapping("/movies")
-    public Movie addMovie(@RequestBody Movie movie){
+    public Movie addMovie(Movie movie) {
         return movieService.addMovie(movie);
     }
 

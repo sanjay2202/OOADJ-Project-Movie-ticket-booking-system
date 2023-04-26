@@ -3,17 +3,34 @@ package com.example.bookmovie.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.bookmovie.models.SeatMatrix1;
+import com.example.bookmovie.models.SeatMatrix2;
+import com.example.bookmovie.models.SeatMatrix3;
 import com.example.bookmovie.models.Show;
+import com.example.bookmovie.repositories.SeatMatrix1Repository;
+import com.example.bookmovie.repositories.SeatMatrix2Repository;
+import com.example.bookmovie.repositories.SeatMatrix3Repository;
 import com.example.bookmovie.repositories.ShowRepository;
 
 @Service
 public class ShowServiceImpl implements ShowService {
 
-    private ShowRepository showRepository;
+    @Autowired
+    ShowRepository showRepository;
 
-    public ShowServiceImpl(ShowRepository showRepository){
+    @Autowired
+    SeatMatrix1Repository seatMatrix1Repository;
+
+    @Autowired
+    SeatMatrix2Repository seatMatrix2Repository;
+
+    @Autowired
+    SeatMatrix3Repository seatMatrix3Repository;
+
+    public ShowServiceImpl(ShowRepository showRepository) {
         this.showRepository = showRepository;
     }
 
@@ -23,7 +40,23 @@ public class ShowServiceImpl implements ShowService {
     }
 
     @Override
-    public Show addShow(Show show) {
+    public Show addShow(Show show, Integer id) {
+        System.out.println(id);
+        if (id == 1) {
+            for(int i=1;i<27;i++){
+            seatMatrix1Repository.save(
+                    new SeatMatrix1(i,0));}
+        } else if (id == 2) {
+            for(int i=1;i<27;i++){
+            seatMatrix2Repository.save(
+                    new SeatMatrix2(i,0));}
+        } else if (id == 3) {
+            for(int i=1;i<27;i++){
+            seatMatrix3Repository.save(
+                    new SeatMatrix3(i,0));}
+        } else {
+            return null;
+        }
         return showRepository.save(show);
     }
 
@@ -55,5 +88,5 @@ public class ShowServiceImpl implements ShowService {
 
         return false;
     }
-    
+
 }

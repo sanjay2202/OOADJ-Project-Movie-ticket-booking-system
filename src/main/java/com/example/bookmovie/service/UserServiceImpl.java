@@ -3,6 +3,7 @@ package com.example.bookmovie.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.bookmovie.models.Login;
@@ -14,8 +15,11 @@ import com.example.bookmovie.repositories.UserRepository;
 @Service
 public class UserServiceImpl implements UserService {
 
-    private UserRepository userRepository;
-    private LoginRepository loginRepository;
+    @Autowired
+    UserRepository userRepository;
+
+    @Autowired
+    LoginRepository loginRepository;
 
     public UserServiceImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
@@ -43,23 +47,23 @@ public class UserServiceImpl implements UserService {
         if (user1 != null) {
             String password = user1.getPassword();
             boolean isRight = false;
-            if (password == login.getPassword())
+            if (password.matches(login.getPassword()))
                 isRight = true;
             else
-                return new LoginMessage("ERROR PASSWORD MATCH", false);
+                return new LoginMessage("ERROR PASSWORD MATCH", false, " ", " ");
             if (isRight) {
                 loginRepository.save(login);
-                return new LoginMessage("LOGIN SUCCESS", true);
+                return new LoginMessage("LOGIN SUCCESS", true, user1.getEmail(), user1.getStatus());
             } else {
-                return new LoginMessage("LOGIN FAILED", false);
+                return new LoginMessage("LOGIN FAILED", false, "", "");
             }
         } else
-            return new LoginMessage("USER NOT FOUND", false);
+            return new LoginMessage("USER NOT FOUND", false, "", "");
     }
 
     @Override
-    public void logoutUser(User user) {
-
+    public void logoutUser() {
+        loginRepository.deleteAll();
     }
 
     @Override
