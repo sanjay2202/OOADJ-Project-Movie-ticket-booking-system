@@ -1,19 +1,14 @@
 package com.example.bookmovie.service;
 
-import java.io.IOException;
-import java.sql.Date;
 import java.util.ArrayList;
-import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.multipart.MultipartFile;
 
 import com.example.bookmovie.models.Movie;
 import com.example.bookmovie.repositories.MovieRepository;
 
-import org.springframework.util.StringUtils;
 
 @Service
 public class MovieServiceImpl implements MovieService {
