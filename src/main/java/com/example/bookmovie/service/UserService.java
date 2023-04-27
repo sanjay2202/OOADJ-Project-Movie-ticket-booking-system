@@ -20,4 +20,6 @@ public interface UserService {
     public boolean deleteUser(Integer userId);
 
     public User getUserByEmailId(String email);
+
+    public Login getCurrentUser();
 }

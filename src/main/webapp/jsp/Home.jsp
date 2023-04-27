@@ -19,6 +19,7 @@
                     <ul class="navbar">
                         <li><a href="./addMovie">ADD MOVIE</a></li>
                         <li><a href="./addShow">ADD SHOW</a></li>
+                        <li><a href="./currUserBookings">View Bookings</a></li>
                         <li><a href="./logoutUser">LOGOUT</a></li>
                     </ul>
                 </div>

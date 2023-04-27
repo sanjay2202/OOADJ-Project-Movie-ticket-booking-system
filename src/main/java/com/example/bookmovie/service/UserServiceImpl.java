@@ -82,4 +82,9 @@ public class UserServiceImpl implements UserService {
         User result = userRepository.findByEmailId(email);
         return result;
     }
+
+    @Override
+    public Login getCurrentUser() {
+        return loginRepository.getCurrentUserEmail();
+    }
 }

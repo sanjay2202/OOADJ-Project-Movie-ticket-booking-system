@@ -34,15 +34,15 @@ public class BookingServiceImpl implements BookingService {
         // // SeatMatrix sm[];
         // // Show[] shows = shows.toArray(new Show[show.size()])
         // for (Show show : shows) {
-        //     if (show.getShowId() == Booking.getShowId()) {
-        //         Integer sm = show.getSeatMatrixID();
+        // if (show.getShowId() == Booking.getShowId()) {
+        // Integer sm = show.getSeatMatrixID();
 
-        //         // sm.confirmSeats(Booking.getSeat());
-        //         // Seat s[] = Booking.getSeatsBooked();
-        //         // for (Seat s : Booking.getSeatsBooked()) {
-        //             // sm.confirmSeats(s.getSeatId());
-        //         // }
-        //     }
+        // // sm.confirmSeats(Booking.getSeat());
+        // // Seat s[] = Booking.getSeatsBooked();
+        // // for (Seat s : Booking.getSeatsBooked()) {
+        // // sm.confirmSeats(s.getSeatId());
+        // // }
+        // }
         // }
         return bookingRepository.save(Booking);
     }
@@ -62,5 +62,10 @@ public class BookingServiceImpl implements BookingService {
         }
 
         return false;
+    }
+
+    @Override
+    public List<Booking> getBookingByEmail(String email) {
+        return bookingRepository.findByEmailId(email);
     }
 }

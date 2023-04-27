@@ -27,12 +27,13 @@
                             <a>
                                 <!-- <h2 class="motiv2">Show Id: ${show.showId}</h2>
                                 <h2 class="motiv2">Movie Id: ${show.movieId}</h2> -->
-                                <h2 class="motiv2">Theatre Id: ${show.theatreId}</h2>
+                                <!-- <h2 class="motiv2">Theatre Id: ${show.theatreId}</h2> -->
+                                <h2 class="motiv2">Movie Id: ${show.movieId}</h2>
                                 <h2 class="motiv2">Date: ${show.date}</h2>
                                 <h2 class="motiv2">Start Time: ${show.startTime}</h2>
                                 <h2 class="motiv2">End Time: ${show.endTime}</h2>
                                 <!-- <h2 class="motiv2">${show.seatMatrixID}</h2> -->
-                    <button class="b1"><a href="./bookingForm?id=${show.showId}">Booking</a></button>
+                    <button class="b1"><a href="./bookingForm?movieId=${show.movieId}&&id=${show.showId}">Booking</a></button>
     
                             </a>
                         </div>

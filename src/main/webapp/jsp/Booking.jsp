@@ -27,39 +27,40 @@
                             <div class="screen">Screen</div><br><br><br>
                             <div class="seats">
                                 <div class="row">
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',1)">1</p></button>
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',2)">2</a></button>
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',3)">3</a></button>
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',4)">4</a></button>
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',5)">5</a></button>
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',6)">6</a></button>                                 
+                                    <button onclick="disableButton()" id="bookTicketButton" class="seat available"> <a onclick="handleClick('${showID}','${movieId}',1)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=1">1</a></button>
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',2)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=2">2</a></button>
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',3)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=3">3</a></button>
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',4)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=4">4</a></button>
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',5)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=5">5</a></button>
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',6)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=6">6</a></button>                             
                                 </div>
                                 <div class="row">
                             
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',7)">7</a></button>
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',8)">8</a></button>
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',9)">9</a></button>                                   
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',10)">10</a></button>                                  
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',11)">11</a></button>     
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',12)">12</a></button>                                 
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',13)">13</a></button>   
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',14)">14</a></button>  
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',7)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=7">7</a></button>
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',8)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=8">8</a></button>
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',9)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=9">9</a></button>
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',10)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=10">10</a></button>
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',11)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=11">11</a></button> 
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',12)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=12">12</a></button>
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',13)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=13">13</a></button>
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',14)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=14">14</a></button>
+
                                 </div>
                                 <div class="row">
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',15)">15</a></button>                                    
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',16)">16</a></button>                                    
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',17)">17</a></button>                                    
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',18)">18</a></button>  
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',19)">19</a></button>                                   
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',20)">20</a></button>    
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',21)">21</a></button>                                   
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',22)">22</a></button>                                      
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',15)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=15">15</a></button>                                    
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',16)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=16">16</a></button>
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',17)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=17">17</a></button>
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',18)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=18">18</a></button>
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',19)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=19">19</a></button>
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',20)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=20">20</a></button>
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',21)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=21">21</a></button>
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',22)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=22">22</a></button>                                      
                                 </div>
                                 <div class="row">
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',23)">23</a></button>                                    
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',23)">24</a></button>  
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',25)">25</a></button>                                   
-                                    <button class="seat available"> <p onclick="handleClick('${showID}',26)">26</a></button>                                    
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',23)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=23">23</a></button>
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',24)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=24">24</a></button>
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',25)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=25">25</a></button>
+                                    <button class="seat available"> <a onclick="handleClick('${showID}','${movieId}',26)" href="./bookingDetails?movieId=${movieId}&&showId=${showID}&&colName=26">26</a></button>                                  
                                 </div>
                                 <br><br><br><br>
                                 </div>
@@ -80,14 +81,21 @@
                 //     document.getElementById("movie_id");
                 //     console.log("hello");
                 // }
-                const handleClick=async(showId,colName)=>{
-                    const res = await fetch("/selectSeat?colName="+ colName +"&&showId="+showId, {method :"post", "Content-Type": "application/json"})
+                const handleClick=async(showId,movieId,colName)=>{
+                    const res = await fetch("/selectSeat?colName="+ colName +"&&showId="+showId + "&&movieId="+movieId, {method :"post", "Content-Type": "application/json"})
                     console.log(res)
                 }
                 // const handleClick1=async(colName)=>{
                 //     const res = await fetch("/selectSeat?colName=${colName}",method="post")
                 //     console.log(res.json())
                 // }
+                function disableButton() {
+                    // Disable the button
+                    document.getElementById("bookTicketButton").disabled = true;
+                    
+                    // Make an AJAX request to update the ticket availability
+                    
+                }
             </script>
             
             </html>
