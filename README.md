@@ -4,7 +4,7 @@
 ##Name: Sanmat S P SRN: PES1UG20CS385
 ##Name: Shriya S Shastry SRN: PES1UG20CS414
 
-```
+
 SYNOPSIS 
 
 The movie ticket booking system using Java is a software application that allows users to book movie tickets online. The system is designed to make it easy for the user to reserve seats for their preferred movies and showtimes, as well as purchase tickets securely online. The system will provide a user-friendly interface for customers to browse through a list of available movies, select the showtime, and choose the seats they want to reserve.
@@ -12,7 +12,7 @@ The movie ticket booking system using Java is a software application that allows
 The movie ticket booking system will be built using Java as the programming language, with the Spring Framework as the primary toolset.
 We follow the MVC (Model-View-Controller) architecture to implement user interfaces, data, and controlling logic. The back-end database will use PostgreSQL as the open-source relational database management system emphasizing extensibility and SQL compliance. The front-end will be implemented using HTML, CSS, and JavaScript.
 
-```
+
 ```
 
 Features of the movie ticket booking system:
