@@ -1,8 +1,9 @@
-#Movie Ticket Booking System
-##Name: Sanjay K N SRN: PES1UG20CS379
-##Name: Sarang Chilkund SRN: PES1UG20CS387
-##Name: Sanmat S P SRN: PES1UG20CS385
-##Name: Shriya S Shastry SRN: PES1UG20CS414
+Movie Ticket Booking System
+
+Name: Sanjay K N SRN: PES1UG20CS379
+Name: Sarang Chilkund SRN: PES1UG20CS387
+Name: Sanmat S P SRN: PES1UG20CS385
+Name: Shriya S Shastry SRN: PES1UG20CS414
 
 
 SYNOPSIS 
