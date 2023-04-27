@@ -13,7 +13,7 @@ The movie ticket booking system will be built using Java as the programming lang
 We follow the MVC (Model-View-Controller) architecture to implement user interfaces, data, and controlling logic. The back-end database will use PostgreSQL as the open-source relational database management system emphasizing extensibility and SQL compliance. The front-end will be implemented using HTML, CSS, and JavaScript.
 
 
-```
+
 
 Features of the movie ticket booking system:
 
@@ -22,7 +22,7 @@ Features of the movie ticket booking system:
 3.	User authentication: The system will require users details to proceed with booking the tickets. Customers will also be able to view their booking history and cancel their bookings if necessary.    
 4.	Admin panel: The system will have an admin panel to manage movies, showtimes, and seating arrangements. The admin will be able to add new movies, update movie information, and view booking details.
 
-```
+
 ## USE-CASE DIAGRAM
 ![image](https://user-images.githubusercontent.com/87925123/234793730-6c19d85b-751d-48b6-82dc-6c0e1a1cdfe5.png)
 
